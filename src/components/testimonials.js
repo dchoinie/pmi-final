@@ -1,0 +1,105 @@
+import React from "react"
+import Dots from "../images/texture/dot-grid.png"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import Img from "gatsby-image"
+import { FaAngleRight } from "react-icons/fa"
+import Testimonial from "../components/testimonial"
+
+const Testimonials = () => {
+  const data = useStaticQuery(graphql`
+    {
+      testimonial: file(
+        relativePath: { eq: "people/undraw_personal_opinions_g3kr.png" }
+      ) {
+        childImageSharp {
+          fluid {
+            src
+            srcSet
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      girl1: file(relativePath: { eq: "people/girl1.jpg" }) {
+        childImageSharp {
+          fluid {
+            src
+            srcSet
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      guy1: file(relativePath: { eq: "people/guy1.jpg" }) {
+        childImageSharp {
+          fluid {
+            src
+            srcSet
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      guy2: file(relativePath: { eq: "people/guy2.jpg" }) {
+        childImageSharp {
+          fluid {
+            src
+            srcSet
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <div className="relative">
+      <div
+        className="absolute"
+        style={{
+          backgroundImage: `url(${Dots})`,
+          backgroundPosition: "center",
+          width: "50%",
+          height: "50%",
+          bottom: "0",
+          right: "0",
+          zIndex: "-1",
+          clipPath: "polygon(0 100%, 100% 100%, 100% 0)",
+        }}
+      ></div>
+      <div className="max-w-screen-xl mx-auto h-screen">
+        <div className="flex w-full h-full">
+          <div className="flex w-1/2">
+            <Img
+              fluid={data.testimonial.childImageSharp.fluid}
+              className="w-full self-center"
+            />
+          </div>
+          <div className="flex w-1/2 flex-col justify-center items-center">
+            <h2 className="text-5xl font-extrabold text-gray-700">
+              Testimonials
+            </h2>
+            <div className="grid grid-cols-1 gap-4">
+              <Testimonial
+                text="I love to go to PMI Total Fitness. Everyone is friendly, professional and the place is clean. My favorite is the tanning beds. 😎"
+                name="Christina"
+                date="9/20/2018"
+                img={data.girl1.childImageSharp.fluid}
+              />
+              <Testimonial
+                text="Amazing equipment, great staff and phenomenal work-outs.💯⭐⭐⭐⭐⭐"
+                name="Brett"
+                date="1/20/2020"
+                img={data.guy1.childImageSharp.fluid}
+              />
+              <Testimonial
+                text="Excellent gym, owners and employees are very helpful and professional."
+                name="Nicholas"
+                date="7/25/2018"
+                img={data.guy2.childImageSharp.fluid}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Testimonials

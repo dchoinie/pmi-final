@@ -1,0 +1,133 @@
+import React from "react"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"
+
+const Footer = () => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          author
+          description
+          title
+          address
+          city
+          email
+          phone
+          state
+          zip
+        }
+      }
+      logo: file(relativePath: { eq: "logos/placeholder-logo1.png" }) {
+        childImageSharp {
+          fluid {
+            src
+            srcSet
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <footer className="bg-primary px-6 pt-12 pb-2 main hidden lg:block">
+      <div className="flex justify-between">
+        <div className="flex justify-around w-1/2">
+          <div className="flex justify-center self-start">
+            <Img fluid={data.logo.childImageSharp.fluid} className="w-64" />
+          </div>
+          <div className="flex flex-col text-gray-500">
+            <div className="flex flex-col self-center mb-2">
+              <p>
+                {data.site.siteMetadata.address} {data.site.siteMetadata.city},{" "}
+                {data.site.siteMetadata.state} {data.site.siteMetadata.zip}
+              </p>
+              <p>{data.site.siteMetadata.phone}</p>
+              <p>{data.site.siteMetadata.email}</p>
+            </div>
+            <div className="flex mt-4">
+              <div className="flex border border-gray-500 p-2 mr-1 rounded-full">
+                <FaFacebook className="text-xl" />
+              </div>
+              <div className="flex border border-gray-500 p-2 mx-1 rounded-full">
+                <FaTwitter className="text-xl" />
+              </div>
+              <div className="flex border border-gray-500 p-2 ml-1 rounded-full">
+                <FaInstagram className="text-xl" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-1/2 justify-around">
+          <div className="mr-6">
+            <ul className="flex flex-col text-gray-500">
+              <li className="text-white">Navigate</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/">Membership</Link>
+              </li>
+              <li>
+                <Link to="/">Services</Link>
+              </li>
+              <li>
+                <Link to="/">Classes</Link>
+              </li>
+              <li>
+                <Link to="/">About</Link>
+              </li>
+              <li>
+                <Link to="/">Contact</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul className="flex flex-col text-gray-500">
+              <li className="text-white">Company</li>
+              <li>
+                <Link to="/jobs">Jobs</Link>
+              </li>
+              <li>
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="/">Terms Of Service</Link>
+              </li>
+
+              <li>
+                <Link to="/">Accessibility Policy</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul className="flex flex-col text-gray-500">
+              <li className="text-white">Members</li>
+              <li>
+                <Link to="/">Sign In</Link>
+              </li>
+              <li>
+                <Link to="/">FAQ</Link>
+              </li>
+              <li>
+                <Link to="/">Guest &amp; Gym Policies</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-screen-xl mx-auto">
+        <hr className="my-4 border-gray-500" />
+      </div>
+      <div className="flex justify-center">
+        <small className="text-gray-500">
+          &copy; PMI Total Fitness {new Date().getFullYear()}, All Rights
+          Reserved
+        </small>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer

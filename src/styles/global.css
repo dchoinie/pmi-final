@@ -1,0 +1,166 @@
+@tailwind base;
+
+:root {
+  --main-purple: #3d2e3c;
+  --light: #edefea;
+  --light-accent: #787b84;
+  --main: #8c838a;
+  --dark-accent: #7b7079;
+  --dark: #2f2f39;
+  --teal: #168080;
+}
+
+* {
+  font-family: "Sen", sans-serif;
+}
+
+@tailwind components;
+
+.largeNav {
+  position: relative;
+  perspective: 600px;
+}
+
+.dropdownBackground {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
+    0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s, opacity 0.1s, translate 0.2s;
+  transform-origin: 50% 0%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: white;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.largeNav li a {
+  color: yellow;
+  text-decoration: none;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.largeNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navList li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  padding: 20px;
+  top: -20px;
+  border-radius: 2px;
+  transition: all 0.5s;
+  transform: translateY(100px);
+  will-change: transform;
+  display: none;
+}
+
+.trigger-enter .dropdown {
+  display: block;
+}
+
+.trigger-enter-active .dropdown {
+  opacity: 1;
+}
+
+.dropdownBackground.open {
+  opacity: 1;
+}
+
+.dropdown {
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.7;
+}
+
+@tailwind utilities;
+
+.sen {
+  font-family: "Sen", sans-serif;
+}
+
+.purple {
+  color: var(--main-purple);
+}
+
+.back-purple {
+  background-color: var(--main-purple);
+}
+
+.teal {
+  color: var(--teal);
+}
+
+.back-teal {
+  background-color: var(--teal);
+}
+
+.light {
+  color: var(--light);
+}
+
+.back-light {
+  background-color: var(--light);
+}
+
+.light-accent {
+  color: var(--light-accent);
+}
+
+.back-light-accent {
+  background-color: var(--light-accent);
+}
+
+.main {
+  color: var(--main);
+}
+
+.back-main {
+  background-color: var(--main);
+}
+
+.dark-accent {
+  color: var(--dark-accent);
+}
+
+.back-dark-accent {
+  background-color: var(--dark-accent);
+}
+
+.dark {
+  color: var(--dark);
+}
+
+.back-dark {
+  background-color: var(--dark);
+}
