@@ -49,7 +49,12 @@ const ContactUs = () => {
               <h2 className="text-5xl font-extrabold text-gray-700">
                 Contact Us
               </h2>
-              <form action="" className="w-full text-lg text-gray-700">
+              <form
+                method="POST"
+                data-netlify="true"
+                name="Contact Form"
+                className="w-full text-lg text-gray-700"
+              >
                 <input
                   type="text"
                   name="fullName"

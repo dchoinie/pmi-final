@@ -65,7 +65,7 @@ const Hero2 = () => {
                 <button className="flex bg-primary text-white text-2xl px-4 py-1 rounded-full shadow mr-2 border border-transparent focus:outline-none hover:bg-primary-light transition duration-150 ease-in-out">
                   Get Started <FaAngleRight className="self-center ml-2" />
                 </button>
-                <button className="flex bg-background text-primary text-2xl px-4 py-1 rounded-full shadow ml-2 border border-primary hover:border-transparent hover:bg-primary-light hover:text-white transition duration-150 ease-in-out">
+                <button className="flex bg-background text-primary text-2xl px-4 py-1 rounded-full shadow ml-2 border border-primary focus:outline-none hover:border-transparent hover:bg-primary-light hover:text-white transition duration-150 ease-in-out">
                   Explore PMI <IoMdFlashlight className="self-center ml-2" />
                 </button>
               </div>
