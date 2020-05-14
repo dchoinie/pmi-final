@@ -1,11 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
-import PageTitle from "../components/pageTitle"
 
 const Hours = () => {
   return (
     <Layout>
-      <PageTitle title="Hours" />
       <div className="max-w-screen-xl mx-auto flex mb-24">
         <div className="flex flex-col bg-white shadow-md rounded-md p-6 w-2/3 mx-auto">
           <h4 className="text-3xl font-bold uppercase text-primary p-2">

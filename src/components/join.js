@@ -19,9 +19,9 @@ const Join = () => {
     }
   `)
   return (
-    <div className="relative">
+    <div className="relative my-12 lg:my-0">
       <div
-        className="absolute"
+        className="hidden absolute lg:block"
         style={{
           backgroundImage: `url(${Dots})`,
           backgroundPosition: "center",
@@ -32,10 +32,10 @@ const Join = () => {
           clipPath: "polygon(0 100%, 0 0, 100% 0)",
         }}
       ></div>
-      <div className="max-w-screen-xl mx-auto h-screen">
-        <div className="flex w-full h-full">
-          <div className="flex w-1/2 flex-col justify-center items-center">
-            <h2 className="text-5xl font-extrabold text-gray-700">
+      <div className="max-w-screen-xl mx-auto lg:h-screen px-4 lg:px-0">
+        <div className="flex flex-col lg:flex-row w-full h-full">
+          <div className="flex w-full lg:w-1/2 flex-col justify-center items-center">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-700">
               Ready To Join?
             </h2>
             <p className="text-gray-600">
@@ -44,19 +44,19 @@ const Join = () => {
             <div className="flex justify-center mt-6">
               <Link
                 to="/membership"
-                className="flex bg-primary text-white text-2xl px-4 py-1 rounded-full shadow mr-2 border border-transparent focus:outline-none"
+                className="flex bg-primary text-white text-base whitespace-no-wrap lg:text-2xl px-4 py-1 rounded-full shadow mr-2 border border-transparent focus:outline-none"
               >
                 Get Started <FaAngleRight className="self-center ml-2" />
               </Link>
               <Link
                 to="/contact"
-                className="flex bg-background text-primary text-2xl px-4 py-1 rounded-full shadow ml-2 border border-primary"
+                className="flex bg-background text-primary text-base whitespace-no-wrap lg:text-2xl px-4 py-1 rounded-full shadow ml-2 border border-primary"
               >
                 Contact Us <FaPhone className="self-center ml-2" />
               </Link>
             </div>
           </div>
-          <div className="flex w-1/2">
+          <div className="flex w-full lg:w-1/2">
             <Img
               fluid={data.join.childImageSharp.fluid}
               className="w-full self-center"

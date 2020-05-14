@@ -49,9 +49,9 @@ const Testimonials = () => {
     }
   `)
   return (
-    <div className="relative">
+    <div className="relative my-12 lg:my-0">
       <div
-        className="absolute"
+        className="hidden absolute lg:block"
         style={{
           backgroundImage: `url(${Dots})`,
           backgroundPosition: "center",
@@ -63,16 +63,16 @@ const Testimonials = () => {
           clipPath: "polygon(0 100%, 100% 100%, 100% 0)",
         }}
       ></div>
-      <div className="max-w-screen-xl mx-auto h-screen">
-        <div className="flex w-full h-full">
-          <div className="flex w-1/2">
+      <div className="max-w-screen-xl mx-auto lg:h-screen">
+        <div className="flex flex-col lg:flex-row w-full h-full px-6 lg:px-0">
+          <div className="flex w-full lg:w-1/2">
             <Img
               fluid={data.testimonial.childImageSharp.fluid}
               className="w-full self-center"
             />
           </div>
-          <div className="flex w-1/2 flex-col justify-center items-center">
-            <h2 className="text-5xl font-extrabold text-gray-700">
+          <div className="flex w-full lg:w-1/2 flex-col justify-center items-center">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-700">
               Testimonials
             </h2>
             <div className="grid grid-cols-1 gap-4">

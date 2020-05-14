@@ -4,9 +4,9 @@ import Dots from "../images/texture/dot-grid.png"
 
 const Membership2 = () => {
   return (
-    <div className="bg-white relative z-10">
+    <div className="bg-white relative z-10 my-12 lg:my-0">
       <div
-        className="absolute"
+        className="hidden absolute lg:block"
         style={{
           backgroundImage: `url(${Dots})`,
           backgroundPosition: "center",
@@ -18,12 +18,12 @@ const Membership2 = () => {
           clipPath: "polygon(0 0, 0% 100%, 100% 100%)",
         }}
       ></div>
-      <div className="max-w-screen-xl mx-auto h-screen flex">
+      <div className="max-w-screen-xl mx-auto lg:h-screen flex">
         <div className="flex flex-col w-full justify-center items-center self-center">
-          <h2 className="text-5xl font-extrabold text-gray-700 mb-6">
+          <h2 className="text-3xl lg:text-5xl font-extrabold text-gray-700 mb-6 ">
             Membership Options
           </h2>
-          <div className="w-full grid grid-cols-3 gap-6">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-6 px-4 lg:px-0">
             <MembershipCard2
               title="Month-To-Month"
               price="35"
@@ -33,7 +33,7 @@ const Membership2 = () => {
               title="Contract"
               price="25"
               description="Get our best value by signing up for a 12/mo contract"
-              large="transform scale-110"
+              large="transform lg:scale-110"
             />
             <MembershipCard2
               title="Senior/Military/Student"

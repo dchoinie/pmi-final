@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 
-const silverSneakers = () => {
+const Services = () => {
   return <Layout></Layout>
 }
 
-export default silverSneakers
+export default Services

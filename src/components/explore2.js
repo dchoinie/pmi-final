@@ -21,9 +21,9 @@ const Explore2 = () => {
     }
   `)
   return (
-    <div className="h-screen relative">
+    <div className="lg:h-screen relative">
       <div
-        className="absolute"
+        className="hidden absolute lg:block"
         style={{
           backgroundImage: `url(${Dots})`,
           backgroundPosition: "center",
@@ -35,35 +35,35 @@ const Explore2 = () => {
         }}
       ></div>
       <div className="bg-white h-full flex max-w-screen-xl mx-auto">
-        <div className="flex w-full">
-          <div className="flex w-1/2 justify-center">
+        <div className="flex flex-col lg:flex-row w-full">
+          <div className="flex w-full lg:w-1/2 justify-center">
             <Img
               fluid={data.explore.childImageSharp.fluid}
               className="w-full self-center"
             />
           </div>
-          <div className="flex flex-col justify-center items-center w-1/2">
-            <h2 className="text-5xl font-extrabold text-gray-700">
+          <div className="flex flex-col justify-center items-center w-full lg:w-1/2">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-700">
               Explore PMI
             </h2>
             <p className="text-center text-gray-600">
               PMI offers a wide variety of free weights, weight machines &amp;
               cardio equipment along with many services &amp; amenities.
             </p>
-            <div className="flex w-full mt-6">
-              <ul className="flex flex-col text-center text-gray-600 w-1/3">
+            <div className="flex flex-col lg:flex-row w-full mt-6">
+              <ul className="flex flex-col text-center text-gray-600 w-full lg:w-1/3">
                 <li className="text-gray-600 text-2xl underline">Equipement</li>
                 <li className="text-gray-500">Aerobic Equipment</li>
                 <li className="text-gray-500">Free Weights</li>
                 <li className="text-gray-500">Weight Machines</li>
               </ul>
-              <ul className="flex flex-col text-center text-gray-600 w-1/3">
+              <ul className="flex flex-col text-center text-gray-600 w-full lg:w-1/3">
                 <li className="text-gray-600 text-2xl underline">Services</li>
                 <li className="text-gray-500">Personal Training</li>
                 <li className="text-gray-500">Tanning</li>
                 <li className="text-gray-500">Massage</li>
               </ul>
-              <ul className="flex flex-col text-center text-gray-600 w-1/3">
+              <ul className="flex flex-col text-center text-gray-600 w-full lg:w-1/3">
                 <li className="text-gray-600 text-2xl underline">Amenities</li>
                 <li className="text-gray-500">Locker Room</li>
                 <li className="text-gray-500">24-Hour Access</li>

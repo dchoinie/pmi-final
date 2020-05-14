@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { FaSignInAlt, FaShoppingCart } from "react-icons/fa"
 
-const Nav51120 = () => {
+const NavLarge = () => {
   const data = useStaticQuery(graphql`
     {
       logo: file(relativePath: { eq: "logos/placeholder-logo2.png" }) {
@@ -74,4 +74,4 @@ const Nav51120 = () => {
   )
 }
 
-export default Nav51120
+export default NavLarge

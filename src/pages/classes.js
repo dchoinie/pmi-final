@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout"
-import PageTitle from "../components/pageTitle"
 import { Link } from "gatsby"
 import { FaInfoCircle } from "react-icons/fa"
 
@@ -9,10 +8,6 @@ const Classes = () => {
     <Layout>
       <div className="my-24">
         <div className="max-w-screen-xl mx-auto">
-          <PageTitle
-            title="Classes"
-            subTitle="Contact us directly to sign up for a class"
-          />
           <iframe
             src="https://calendar.google.com/calendar/embed?src=f3qg34gum8ds1rhiil0vi0cb8o%40group.calendar.google.com&ctz=America%2FChicago"
             style={{ border: "0", height: "75vh" }}

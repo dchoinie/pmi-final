@@ -17,10 +17,10 @@ export default class testimonial extends Component {
         <div className="flex w-1/6 justify-center">
           <Img
             fluid={this.props.img}
-            className="w-16 h-16 rounded-full self-center shadow-md"
+            className="w-12 lg:w-16 h-12 lg:h-16 rounded-full self-center shadow-md"
           />
         </div>
-        <div className="flex w-5/6 flex-col p-2">
+        <div className="flex w-5/6 flex-col p-2 text-sm lg:text-base">
           <p className="text-gray-700">{this.props.text}</p>
           <p className="text-gray-600">
             - {this.props.name} | {this.props.date}

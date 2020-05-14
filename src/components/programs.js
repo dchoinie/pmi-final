@@ -81,9 +81,9 @@ const Programs = () => {
     }
   `)
   return (
-    <div className="relative">
+    <div className="relative my-12 lg:my-0">
       <div
-        className="absolute"
+        className="hidden absolute lg:block"
         style={{
           backgroundImage: `url(${Dots})`,
           backgroundPosition: "center",
@@ -94,11 +94,13 @@ const Programs = () => {
           clipPath: "polygon(0 0, 100% 100%, 100% 0)",
         }}
       ></div>
-      <div className="max-w-screen-xl mx-auto h-screen">
-        <div className="flex w-full h-full">
-          <div className="flex flex-col justify-center items-center w-1/2">
-            <h2 className="text-5xl font-extrabold text-gray-700">Programs</h2>
-            <p className="text-center text-gray-600">
+      <div className="max-w-screen-xl mx-auto lg:h-screen">
+        <div className="flex flex-col lg:flex-row w-full h-full">
+          <div className="flex flex-col justify-center items-center w-full lg:w-1/2">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-700">
+              Programs
+            </h2>
+            <p className="text-center text-gray-600 px-4 lg:px-0">
               PMI supports a variety of reimbursement/incentive programs. Log in
               to:{" "}
               <a
@@ -111,7 +113,7 @@ const Programs = () => {
               </a>{" "}
               to check eligibility.
             </p>
-            <div className="w-full grid grid-cols-3 col-gap-6 mt-6">
+            <div className="w-full grid grid-cols-2 lg:grid-cols-3 col-gap-6 mt-6 px-4 lg:px-0">
               <Img
                 fluid={data.silverSneakers.childImageSharp.fluid}
                 className="self-center"
@@ -144,7 +146,7 @@ const Programs = () => {
               Learn More <FaAngleRight className="self-center ml-2" />
             </Link>
           </div>
-          <div className="flex w-1/2 self-center">
+          <div className="flex w-full lg:w-1/2 self-center">
             <Img
               fluid={data.programs.childImageSharp.fluid}
               className="w-full"

@@ -1,11 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
-import PageTitle from "../components/pageTitle"
 
 const PrivacyPolicy = () => {
   return (
     <Layout>
-      <PageTitle title="Privacy Policy" />
       <div className="max-w-screen-xl mx-auto my-12">
         <h2 className="purple text-4xl font-bold text-center">
           Privacy Policy for PMI Total Fitness

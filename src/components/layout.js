@@ -1,16 +1,13 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
+import NavLarge from "./navLarge"
+import NavSmall from "./navSmall"
 import Footer from "./footer"
-import LargeNav from "../components/largeNav"
-import MobileNav from "../components/mobileNav"
-import Nav51120 from "../components/nav51120"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Nav51120 />
-      <MobileNav />
+      <NavLarge />
+      <NavSmall />
       <main>{children}</main>
       <Footer />
     </>
