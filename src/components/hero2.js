@@ -32,7 +32,7 @@ const Hero2 = () => {
     }
   `)
   return (
-    <div className="flex h-screen relative hero-margin">
+    <div className="flex h-screen relative hero-margin -z-10">
       <div
         className="hidden absolute lg:block"
         style={{
