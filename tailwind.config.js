@@ -6,13 +6,11 @@ module.exports = {
       },
       colors: {
         "primary-dark": "#2C1858",
-        // primary: "#5F4B8B",
         primary: "#4a2862",
         "primary-light": "#927EBE",
         "secondary-light": "#50B8BB",
         secondary: "#1d8588",
         "secondary-dark": "#005255",
-        // background: "#F3F7FA",
         background: "#ece9f0",
       },
       height: {

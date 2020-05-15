@@ -19,6 +19,19 @@ const AboutPMI = () => {
   `)
   return (
     <div className="relative">
+      <div
+        className="hidden absolute lg:block"
+        style={{
+          backgroundImage: `url(${Dots})`,
+          backgroundPosition: "center",
+          width: "50%",
+          height: "50%",
+          bottom: "0",
+          left: "0",
+          zIndex: "-1",
+          clipPath: "polygon(0 0, 0% 100%, 100% 100%)",
+        }}
+      ></div>
       <div className="max-w-screen-xl mx-auto h-screen">
         <div className="flex w-full h-full">
           <div className="flex w-1/2 p-6">

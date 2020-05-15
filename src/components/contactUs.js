@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQueryl, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { FaAngleRight } from "react-icons/fa"
 import Dots from "../images/texture/dot-grid.png"
@@ -21,7 +21,7 @@ const ContactUs = () => {
   return (
     <div className="relative">
       <div
-        className="absolute"
+        className="hidden absolute lg:block"
         style={{
           backgroundImage: `url(${Dots})`,
           backgroundPosition: "center",
@@ -33,18 +33,15 @@ const ContactUs = () => {
           clipPath: "polygon(0 0, 0% 100%, 100% 100%)",
         }}
       ></div>
-      <div
-        className="max-w-screen-xl mx-auto h-screen"
-        // style={{ marginTop: "-110.31px" }}
-      >
-        <div className="flex w-full h-full">
-          <div className="flex w-1/2">
+      <div className="max-w-screen-xl mx-auto lg:h-screen px-4 lg:px-0 py-12 lg:py-0">
+        <div className="flex flex-col lg:flex-row w-full h-full">
+          <div className="flex w-full lg:w-1/2">
             <Img
               fluid={data.contact.childImageSharp.fluid}
               className="w-full self-center"
             />
           </div>
-          <div className="flex w-1/2">
+          <div className="flex w-full lg:w-1/2">
             <div className="flex flex-col self-center items-center w-full">
               <h2 className="text-5xl font-extrabold text-gray-700">
                 Contact Us
@@ -52,6 +49,7 @@ const ContactUs = () => {
               <form
                 method="POST"
                 data-netlify="true"
+                action="/success"
                 data-netlify-honeypot="bot-field"
                 name="contact"
                 className="w-full text-lg text-gray-700"
@@ -63,6 +61,7 @@ const ContactUs = () => {
                   id="fullName"
                   placeholder="Full Name"
                   className="w-full p-2 border border-gray-500 rounded-md focus:outline-none mb-2"
+                  required
                 />
                 <input
                   type="email"
@@ -70,6 +69,7 @@ const ContactUs = () => {
                   id="email"
                   placeholder="Email"
                   className="w-full p-2 border border-gray-500 rounded-md focus:outline-none my-2"
+                  required
                 />
                 <input
                   type="tel"
@@ -85,6 +85,7 @@ const ContactUs = () => {
                   rows="5"
                   placeholder="Message"
                   className="w-full p-2 border border-gray-500 rounded-md focus:outline-none mt-2"
+                  required
                 ></textarea>
                 <button
                   type="submit"

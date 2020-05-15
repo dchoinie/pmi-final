@@ -1,15 +1,5 @@
 @tailwind base;
 
-:root {
-  --main-purple: #3d2e3c;
-  --light: #edefea;
-  --light-accent: #787b84;
-  --main: #8c838a;
-  --dark-accent: #7b7079;
-  --dark: #2f2f39;
-  --teal: #168080;
-}
-
 * {
   font-family: "Sen", sans-serif;
 }
@@ -30,60 +20,4 @@
 
 .sen {
   font-family: "Sen", sans-serif;
-}
-
-.purple {
-  color: var(--main-purple);
-}
-
-.back-purple {
-  background-color: var(--main-purple);
-}
-
-.teal {
-  color: var(--teal);
-}
-
-.back-teal {
-  background-color: var(--teal);
-}
-
-.light {
-  color: var(--light);
-}
-
-.back-light {
-  background-color: var(--light);
-}
-
-.light-accent {
-  color: var(--light-accent);
-}
-
-.back-light-accent {
-  background-color: var(--light-accent);
-}
-
-.main {
-  color: var(--main);
-}
-
-.back-main {
-  background-color: var(--main);
-}
-
-.dark-accent {
-  color: var(--dark-accent);
-}
-
-.back-dark-accent {
-  background-color: var(--dark-accent);
-}
-
-.dark {
-  color: var(--dark);
-}
-
-.back-dark {
-  background-color: var(--dark);
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Dots from "../images/texture/dot-grid.png"
 import { FaAngleRight } from "react-icons/fa"
@@ -32,7 +32,7 @@ const Hero2 = () => {
     }
   `)
   return (
-    <div className="flex h-screen relative hero-margin -z-10">
+    <div className="flex h-screen relative">
       <div
         className="hidden absolute lg:block"
         style={{
@@ -57,9 +57,12 @@ const Hero2 = () => {
                 {data.site.siteMetadata.description}
               </h5>
               <div className="flex justify-center lg:justify-start w-full mt-2">
-                <button className="flex bg-primary text-white text-base whitespace-no-wrap lg:text-2xl px-4 py-1 rounded-full shadow mr-2 border border-transparent focus:outline-none hover:bg-primary-light transition duration-150 ease-in-out">
+                <Link
+                  to="/membership"
+                  className="flex bg-primary text-white text-base whitespace-no-wrap lg:text-2xl px-4 py-1 rounded-full shadow mr-2 border border-transparent focus:outline-none hover:bg-primary-light transition duration-150 ease-in-out"
+                >
                   Get Started <FaAngleRight className="self-center ml-2" />
-                </button>
+                </Link>
                 <button className="flex bg-background text-primary text-base whitespace-no-wrap lg:text-2xl px-4 py-1 rounded-full shadow ml-2 border border-primary focus:outline-none hover:border-transparent hover:bg-primary-light hover:text-white transition duration-150 ease-in-out">
                   Explore PMI <IoMdFlashlight className="self-center ml-2" />
                 </button>
