@@ -15,12 +15,16 @@ module.exports = {
       },
       height: {
         "screen-50": "50vh",
+        half: "50%",
       },
       fontSize: {
         huge: "3.5rem",
       },
       inset: {
         "-6": "-1.5rem",
+      },
+      maxWidth: {
+        "50": "50%",
       },
     },
   },

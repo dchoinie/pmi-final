@@ -23,7 +23,7 @@ export default class membershipCard2 extends Component {
           <div className="flex flex-col items-center justify-between h-full">
             <div className="">
               <p className="text-center text-gray-500">Starting At:</p>
-              <p className="text-center text-5xl font-bold text-gray-700">
+              <p className="flex justify-center text-center text-5xl font-bold text-gray-700">
                 ${this.props.price}{" "}
                 <span className="text-lg self-center text-gray-600">/Mo</span>
               </p>
