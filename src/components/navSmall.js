@@ -38,7 +38,7 @@ const NavSmall = () => {
           className="flex flex-col bg-white w-full h-full justify-center items-center px-4"
           style={{ height: "calc(100vh - 78.31px)" }}
         >
-          <div className="flex mb-12">
+          <div className="flex mb-12 text-gray-700">
             <button className="flex snipcart-customer-signin mr-2">
               <FaSignInAlt className="self-center mr-2" />
               Sign In
@@ -48,7 +48,7 @@ const NavSmall = () => {
               Cart
             </button>
           </div>
-          <ul className="flex-flex-col text-center text-xl w-full">
+          <ul className="flex-flex-col text-center text-xl w-full text-gray-600">
             <li className="py-2 border-b border-gray-500">
               <Link to="/membership">Membership</Link>
             </li>

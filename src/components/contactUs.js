@@ -19,7 +19,7 @@ const ContactUs = () => {
     }
   `)
   return (
-    <div className="relative">
+    <div className="relative hero-margin">
       <div
         className="hidden absolute lg:block"
         style={{
