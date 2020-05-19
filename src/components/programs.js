@@ -146,7 +146,7 @@ const Programs = () => {
               Learn More <FaAngleRight className="self-center ml-2" />
             </Link>
           </div>
-          <div className="flex w-full lg:w-1/2 self-center">
+          <div className="flex w-full lg:w-1/2 self-center order-first lg:order-last">
             <Img
               fluid={data.programs.childImageSharp.fluid}
               className="w-full"

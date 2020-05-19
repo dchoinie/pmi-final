@@ -56,7 +56,7 @@ const Join = () => {
               </Link>
             </div>
           </div>
-          <div className="flex w-full lg:w-1/2">
+          <div className="flex w-full lg:w-1/2 order-first lg:order-last">
             <Img
               fluid={data.join.childImageSharp.fluid}
               className="w-full self-center"

@@ -33,14 +33,14 @@ const AboutPMI = () => {
         }}
       ></div>
       <div className="max-w-screen-xl mx-auto h-screen">
-        <div className="flex w-full h-full">
-          <div className="flex w-1/2 p-6">
+        <div className="flex flex-col lg:flex-row w-full h-full">
+          <div className="flex w-full lg:w-1/2 p-6">
             <Img
               fluid={data.about.childImageSharp.fluid}
               className="w-full self-center rounded-md shadow-md"
             />
           </div>
-          <div className="flex w-1/2 p-6">
+          <div className="flex w-full lg:w-1/2 p-6">
             <div className="flex flex-col self-center items-center w-full">
               <h2 className="text-5xl font-extrabold text-gray-700">
                 About PMI

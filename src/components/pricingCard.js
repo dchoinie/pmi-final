@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { FaCheckCircle, FaAngleRight } from "react-icons/fa"
 import { Link } from "gatsby"
+import Dots from "../images/texture/dot-grid.png"
 
 export default class PricingCard extends Component {
   static propTypes = {
@@ -17,7 +18,7 @@ export default class PricingCard extends Component {
 
   render() {
     return (
-      <div className="shadow-md rounded-md my-2 border border-gray-200">
+      <div className="shadow-md rounded-md my-2 border border-gray-300">
         <div className="flex flex-col lg:h-40">
           <div className="flex flex-col lg:flex-row h-full">
             <div className="flex flex-col w-full lg:w-2/3 p-6">

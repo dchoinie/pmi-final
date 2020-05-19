@@ -98,7 +98,7 @@ const Membership = ({ data }) => {
                 button={<NoContract24Btn />}
               />
             </div>
-            <div className="flex flex-col items-center w-full lg:w-1/2 self-center">
+            <div className="flex flex-col items-center w-full lg:w-1/2 self-center order-first lg:order-last">
               <h2 className="text-2xl lg:text-4xl font-extrabold text-gray-700">
                 Month-To-Month Options
               </h2>
@@ -161,7 +161,7 @@ const Membership = ({ data }) => {
                 button={<Special24Btn />}
               />
             </div>
-            <div className="flex flex-col items-center w-full lg:w-1/2 self-center">
+            <div className="flex flex-col items-center w-full lg:w-1/2 self-center order-first lg:order-last">
               <h2 className="text-2xl lg:text-4xl font-extrabold text-gray-700">
                 Student/Military/Senior(65+)
               </h2>
