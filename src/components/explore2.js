@@ -21,7 +21,7 @@ const Explore2 = () => {
     }
   `)
   return (
-    <div className="lg:h-screen relative px-6 lg:px-0">
+    <div className="lg:h-screen relative px-6 lg:px-0" id="explore">
       <div
         className="hidden absolute lg:block"
         style={{

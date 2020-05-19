@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll"
 import Img from "gatsby-image"
 import Dots from "../images/texture/dot-grid.png"
 import { FaAngleRight } from "react-icons/fa"
@@ -63,9 +64,14 @@ const Hero2 = () => {
                 >
                   Get Started <FaAngleRight className="self-center ml-2" />
                 </Link>
-                <button className="flex bg-background text-primary text-base whitespace-no-wrap lg:text-2xl px-4 py-1 rounded-full shadow ml-2 border border-primary focus:outline-none hover:border-transparent hover:bg-primary-light hover:text-white transition duration-150 ease-in-out">
+                <ScrollLink
+                  to="explore"
+                  smooth={true}
+                  duration={500}
+                  className="flex bg-background text-primary text-base whitespace-no-wrap lg:text-2xl px-4 py-1 rounded-full shadow ml-2 border border-primary focus:outline-none hover:border-transparent hover:bg-primary-light hover:text-white transition duration-150 ease-in-out cursor-pointer"
+                >
                   Explore PMI <IoMdFlashlight className="self-center ml-2" />
-                </button>
+                </ScrollLink>
               </div>
             </div>
           </div>
