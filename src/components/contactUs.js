@@ -54,7 +54,7 @@ const ContactUs = () => {
                 name="contact"
                 className="w-full text-lg text-gray-700"
               >
-                <input type="hidden" name="Contact Form" value="contact" />
+                <input type="hidden" name="contact" value="contact" />
                 <input
                   type="text"
                   name="fullName"

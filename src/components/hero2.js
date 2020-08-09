@@ -11,7 +11,7 @@ const Hero2 = () => {
     {
       hero: file(relativePath: { eq: "people/undraw_healthy_habit_bh5w.png" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 80) {
             src
             srcSet
             ...GatsbyImageSharpFluid
