@@ -6,7 +6,7 @@ import { FaSignInAlt, FaShoppingCart } from "react-icons/fa"
 const NavLarge = () => {
   const data = useStaticQuery(graphql`
     {
-      logo: file(relativePath: { eq: "logos/placeholder-logo2.png" }) {
+      logo: file(relativePath: { eq: "logos/logo.png" }) {
         childImageSharp {
           fluid {
             srcSet
@@ -42,25 +42,25 @@ const NavLarge = () => {
           </Link>
         </div>
         <ul className="flex text-gray-700">
-          <li className="self-center mr-4">
+          <li className="self-center mr-4 border-b border-transparent hover:border-primary">
             <Link to="/">Home</Link>
           </li>
-          <li className="self-center mx-4">
+          <li className="self-center mx-4 border-b border-transparent hover:border-primary">
             <Link to="/membership">Membership</Link>
           </li>
-          <li className="self-center mx-4">
+          {/* <li className="self-center mx-4 border-b border-transparent hover:border-primary">
             <Link to="/programs">Programs</Link>
-          </li>
-          <li className="self-center mx-4">
+          </li> */}
+          <li className="self-center mx-4 border-b border-transparent hover:border-primary">
             <Link to="/services">Services</Link>
           </li>
-          <li className="self-center mx-4">
+          <li className="self-center mx-4 border-b border-transparent hover:border-primary">
             <Link to="/about">About</Link>
           </li>
-          <li className="self-center mx-4">
+          <li className="self-center mx-4 border-b border-transparent hover:border-primary">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="self-center ml-4 ">
+          <li className="self-center ml-4">
             <Link
               to="/membership"
               className="bg-primary text-white text-lg px-4 py-2 rounded-full shadow-md hover:bg-primary-light transition duration-150 ease-in-out"

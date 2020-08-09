@@ -138,39 +138,6 @@ const Membership = ({ data }) => {
               />
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row my-24">
-            <div className="flex flex-col w-full lg:w-1/2 h-full">
-              <PricingCard
-                title="Student/Military/Senior(65+)"
-                desc="Special rate for current students, military members or seniors age 65+"
-                price="25"
-                feat1="No commitment"
-                feat2="Access to all equipment"
-                feat3="Locker room access"
-                feat4="Welcome 50% off services"
-                button={<SpecialBtn />}
-              />
-              <PricingCard
-                title="Student/Military/Senior(65+) With 24-hour Access"
-                desc="24-Hour access to PMI for 1 month"
-                price="25"
-                feat1="No commitment"
-                feat2="Access to all equipment"
-                feat3="Locker room access"
-                feat4="Welcome 50% off services"
-                button={<Special24Btn />}
-              />
-            </div>
-            <div className="flex flex-col items-center w-full lg:w-1/2 self-center order-first lg:order-last">
-              <h2 className="text-2xl lg:text-4xl font-extrabold text-gray-700">
-                Student/Military/Senior(65+)
-              </h2>
-              <Img
-                fluid={data.student.childImageSharp.fluid}
-                className="w-full"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </Layout>

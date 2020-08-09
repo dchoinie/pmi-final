@@ -7,7 +7,7 @@ const NavSmall = () => {
   const [navOpen, setNavOpen] = useState(false)
   const data = useStaticQuery(graphql`
     {
-      logo: file(relativePath: { eq: "logos/placeholder-logo2.png" }) {
+      logo: file(relativePath: { eq: "logos/logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 200) {
             srcSet
@@ -50,11 +50,14 @@ const NavSmall = () => {
           </div>
           <ul className="flex-flex-col text-center text-xl w-full text-gray-600">
             <li className="py-2 border-b border-gray-500">
-              <Link to="/membership">Membership</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="py-2 border-b border-gray-500">
-              <Link to="/programs">Programs</Link>
+              <Link to="/membership">Membership</Link>
             </li>
+            {/* <li className="py-2 border-b border-gray-500">
+              <Link to="/programs">Programs</Link>
+            </li> */}
             <li className="py-2 border-b border-gray-500">
               <Link to="/services">Services</Link>
             </li>

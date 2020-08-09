@@ -46,18 +46,11 @@ const AboutPMI = () => {
                 About PMI
               </h2>
               <p className="text-gray-600 mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                itaque veritatis maxime magnam praesentium ipsam aut nulla et
-                minima aliquid dolore, hic incidunt fugit, cupiditate fuga
-                commodi adipisci nam libero amet natus! Ducimus placeat dolorum
-                sint temporibus quia nam! Temporibus.
-              </p>
-              <p className="text-gray-600 mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                itaque veritatis maxime magnam praesentium ipsam aut nulla et
-                minima aliquid dolore, hic incidunt fugit, cupiditate fuga
-                commodi adipisci nam libero amet natus! Ducimus placeat dolorum
-                sint temporibus quia nam! Temporibus.
+                PMI Total Fitness is a fitness and rehabilitation gym located in
+                Waterville, Minnesota. Available amenities include free weights,
+                weight and aerobic machines, yoga, personal training
+                specializing in Post Rehabilitation, massage, tanning, &amp;
+                more!
               </p>
             </div>
           </div>

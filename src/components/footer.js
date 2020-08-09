@@ -19,7 +19,7 @@ const Footer = () => {
           zip
         }
       }
-      logo: file(relativePath: { eq: "logos/placeholder-logo1.png" }) {
+      logo: file(relativePath: { eq: "logos/logo.png" }) {
         childImageSharp {
           fluid {
             src
@@ -31,13 +31,13 @@ const Footer = () => {
     }
   `)
   return (
-    <footer className="bg-primary">
+    <footer className="bg-primary-dark">
       <div className="max-w-screen-xl mx-auto p-12">
         <div className="flex flex-col lg:flex-row justify-between">
-          <div className="flex flex-col lg:flex-row justify-around w-full lg:w-1/2">
-            <div className="flex justify-center lg:self-start">
+          <div className="flex flex-col lg:flex-row justify-start w-full lg:w-1/2">
+            {/* <div className="flex justify-center lg:self-start">
               <Img fluid={data.logo.childImageSharp.fluid} className="w-56" />
-            </div>
+            </div> */}
             <div className="flex flex-col text-gray-500 text-center lg:text-left">
               <div className="flex flex-col self-center mb-2">
                 <p>
