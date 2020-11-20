@@ -58,6 +58,9 @@ const NavLarge = () => {
             <Link to="/about">About</Link>
           </li>
           <li className="self-center mx-4 border-b border-transparent hover:border-primary">
+            <Link to="/hours">Hours</Link>
+          </li>
+          <li className="self-center mx-4 border-b border-transparent hover:border-primary">
             <Link to="/contact">Contact</Link>
           </li>
           <li className="self-center ml-4">

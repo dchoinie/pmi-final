@@ -6,6 +6,7 @@ const Hours = () => {
     <Layout>
       <div className="max-w-screen-xl mx-auto flex mb-24">
         <div className="flex flex-col bg-white shadow-md rounded-md p-6 w-2/3 mx-auto">
+          <p className="text-center text-red-500 text-2xl font-bold">Temporarily Closed</p>
           <h4 className="text-3xl font-bold uppercase text-primary p-2">
             PMI Hours
           </h4>
@@ -41,6 +42,9 @@ const Hours = () => {
             </div>
             <div className="flex justify-center py-2 p-2">
               <p className="capitalize">*24-hour access cards available*</p>
+            </div>
+            <div className="flex justify-center p-2">
+              <p className="text-red-500 font-bold text-center">Due to COVID-19 restrictions, appointment required for use. Visit our <a href="https://www.facebook.com/pmitotalfitness" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">Facebook page</a> to schedule an appointment</p>
             </div>
           </div>
         </div>

@@ -48,9 +48,11 @@ const Footer = () => {
                 <p>{data.site.siteMetadata.email}</p>
               </div>
               <div className="flex justify-center lg:justify-start my-4">
-                <div className="flex border border-gray-500 p-2 mr-1 rounded-full">
-                  <FaFacebook className="text-xl" />
-                </div>
+                <a href="https://www.facebook.com/pmitotalfitness" target="_blank" rel="noopener noreferrer">
+                  <div className="flex border border-gray-500 p-2 mr-1 rounded-full">
+                    <FaFacebook className="text-xl" />
+                  </div>
+                </a>
                 <div className="flex border border-gray-500 p-2 mx-1 rounded-full">
                   <FaTwitter className="text-xl" />
                 </div>

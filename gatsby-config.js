@@ -11,7 +11,7 @@ module.exports = {
     city: `Waterville`,
     state: `MN`,
     zip: `56096`,
-    phone: `507.362.4227`,
+    phone: `507.362.4227 or text 507.210.6880`,
     email: `pmi.totalfitness@hotmail.com`,
   },
   plugins: [

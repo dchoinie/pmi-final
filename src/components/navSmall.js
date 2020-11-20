@@ -62,6 +62,9 @@ const NavSmall = () => {
               <Link to="/services">Services</Link>
             </li>
             <li className="py-2 border-b border-gray-500">
+              <Link to="/hours">Hours</Link>
+            </li>
+            <li className="py-2 border-b border-gray-500">
               <Link to="/about">About</Link>
             </li>
             <li className="py-2 border-b border-gray-500">
