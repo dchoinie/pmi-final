@@ -44,7 +44,7 @@ const Hours = () => {
               <p className="capitalize">*24-hour access cards available*</p>
             </div>
             <div className="flex justify-center p-2">
-              <p className="text-red-500 font-bold text-center">Due to COVID-19 restrictions, appointment required for use. Visit our <a href="https://www.facebook.com/pmitotalfitness" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">Facebook page</a> to schedule an appointment</p>
+              <p className="text-red-500 font-bold text-center">Due to COVID-19 restrictions, appointment required for use. Visit our <a href="https://www.facebook.com/pmitotalfitness/appointments" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">Facebook page</a> to schedule an appointment</p>
             </div>
           </div>
         </div>

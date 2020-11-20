@@ -79,7 +79,7 @@ const Membership = ({ data }) => {
             <div className="flex flex-col w-full lg:w-1/2 h-full">
               <PricingCard
                 title="Individual (Month-To-Month)"
-                desc="Access to PMI for 1 month"
+                desc="Access to PMI during regular business hours for the duration of 1 month"
                 price="35"
                 feat1="No commitment"
                 feat2="Access to all equipment"
@@ -118,7 +118,7 @@ const Membership = ({ data }) => {
             <div className="flex flex-col w-full lg:w-1/2 h-full">
               <PricingCard
                 title="Individual (Contract)"
-                desc="Access to PMI for 12 months"
+                desc="Access to PMI during regular business hours for 12 months"
                 price="25"
                 feat1="Discounted rate"
                 feat2="Access to all equipment"
