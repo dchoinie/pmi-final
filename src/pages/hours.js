@@ -33,7 +33,7 @@ const Hours = () => {
             </div>
             <div className="flex justify-between py-2 bg-gray-200 p-2">
               <p>Saturday</p>
-              <p>9am - 2pm</p>
+              <p>Closed</p>
             </div>
             <div className="flex justify-between pt-2 p-2">
               <p>Sunday</p>

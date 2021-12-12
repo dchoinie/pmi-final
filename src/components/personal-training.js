@@ -35,9 +35,11 @@ const PersonalTraining = () => {
                 Personal Training
               </h2>
               <p className="mb-4 text-gray-600 text-center">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Excepturi, natus accusantium! Nesciunt ipsum, atque maiores quod
-                repellendus temporibus eum velit.
+                With 30 years of experience, our National Academy of Sport
+                Medicine (NASM) Certified Personal Trainer and
+                Post-Rehabilitation Specialist is available for personal and
+                group instruction, coaching and individualized program design to
+                meet your specific goals.
               </p>
               <div className="flex flex-col lg:flex-row w-full">
                 <div className="flex justify-center w-full lg:w-1/2 mb-4 lg:mb-0">

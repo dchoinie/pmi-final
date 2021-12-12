@@ -34,9 +34,10 @@ const Massage = () => {
                 Massage
               </h2>
               <p className="text-gray-700 mb-4 text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                quis delectus, ut cupiditate unde deleniti perferendis fugiat
-                quidem animi id.
+                Performed by Julie Meister, licensed PTA and Personal Trainer
+                performed with the focus on healing and getting to the root of
+                the problem. Sessions include suggestions for stretching and/or
+                exercises to create balance.
               </p>
               <div className="grid grid-cols-4 gap-2 w-full text-center">
                 <div className="col-span-2 text-gray-700 font-bold">
@@ -47,19 +48,19 @@ const Massage = () => {
                 </div>
                 <div className="flex flex-col">
                   <p className="text-gray-700 underline">1/2 Hour</p>
-                  <p className="text-gray-600">$30</p>
-                </div>
-                <div className="flex flex-col">
-                  <p className="text-gray-700 underline">1 Hour</p>
-                  <p className="text-gray-600">$50</p>
-                </div>
-                <div className="flex flex-col">
-                  <p className="text-gray-700 underline">1/2 Hour</p>
-                  <p className="text-gray-600">$38</p>
+                  <p className="text-gray-600">$35</p>
                 </div>
                 <div className="flex flex-col">
                   <p className="text-gray-700 underline">1 Hour</p>
                   <p className="text-gray-600">$60</p>
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-gray-700 underline">1/2 Hour</p>
+                  <p className="text-gray-600">$40</p>
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-gray-700 underline">1 Hour</p>
+                  <p className="text-gray-600">$65</p>
                 </div>
               </div>
             </div>
