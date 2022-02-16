@@ -19,22 +19,6 @@ const NavLarge = () => {
   `)
   return (
     <div className="bg-transparent hidden lg:block relative z-10 py-4">
-      <div className="max-w-screen-xl mx-auto mb-2">
-        <ul className="flex justify-end text-gray-700">
-          <li className="mr-4">
-            <button className="flex snipcart-customer-signin">
-              <FaSignInAlt className="self-center mr-2" />
-              Sign In
-            </button>
-          </li>
-          <li className="flex">
-            <button className="flex snipcart-checkout">
-              <FaShoppingCart className="self-center mr-2" />
-              Cart
-            </button>
-          </li>
-        </ul>
-      </div>
       <div className="flex justify-between max-w-screen-xl mx-auto">
         <div className="flex self-end">
           <Link to="/">
