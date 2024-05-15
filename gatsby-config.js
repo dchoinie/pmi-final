@@ -23,7 +23,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-favicon`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
@@ -33,12 +32,6 @@ module.exports = {
         google: {
           families: ["Sen"],
         },
-      },
-    },
-    {
-      resolve: "gatsby-plugin-snipcartv3",
-      options: {
-        apiKey: process.env.SNIPCART_API_KEY,
       },
     },
     {

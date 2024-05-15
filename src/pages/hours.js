@@ -17,7 +17,7 @@ const Hours = () => {
             </div>
             <div className="flex justify-between py-2 bg-gray-200 p-2">
               <p>Tuesday</p>
-              <p>8am - 5pm</p>
+              <p>Closed</p>
             </div>
             <div className="flex justify-between py-2 p-2">
               <p>Wednesday</p>
@@ -25,7 +25,7 @@ const Hours = () => {
             </div>
             <div className="flex justify-between py-2 bg-gray-200 p-2">
               <p>Thursday</p>
-              <p>8am - 5pm</p>
+              <p>Closed</p>
             </div>
             <div className="flex justify-between py-2 p-2">
               <p>Friday</p>
@@ -33,11 +33,14 @@ const Hours = () => {
             </div>
             <div className="flex justify-between py-2 bg-gray-200 p-2">
               <p>Saturday</p>
-              <p>Closed</p>
+              <p>9am - 1pm</p>
             </div>
             <div className="flex justify-between pt-2 p-2">
               <p>Sunday</p>
               <p>Closed</p>
+            </div>
+            <div>
+              *or by appointment*
             </div>
             <div className="flex justify-center py-2 p-2">
               <p className="capitalize">*24-hour access cards available*</p>
