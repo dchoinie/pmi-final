@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Massage = () => {
   const data = useStaticQuery(graphql`
@@ -9,11 +9,7 @@ const Massage = () => {
         relativePath: { eq: "people/undraw_mindfulness_scgo.png" }
       ) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -23,8 +19,8 @@ const Massage = () => {
       <div className="max-w-screen-xl mx-auto h-screen">
         <div className="flex flex-col lg:flex-row w-full h-full">
           <div className="flex w-full lg:w-1/2">
-            <Img
-              fluid={data.massage.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.massage.childImageSharp.gatsbyImageData}
               className="self-center w-full"
             />
           </div>

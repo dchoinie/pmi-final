@@ -1,7 +1,7 @@
 import React from "react"
 import Dots from "../images/texture/dot-grid.png"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FaAngleRight } from "react-icons/fa"
 
 const Programs = () => {
@@ -11,71 +11,43 @@ const Programs = () => {
         relativePath: { eq: "people/undraw_healthy_lifestyle_6tyl.png" }
       ) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       silverSneakers: file(
         relativePath: { eq: "thirdPartyLogos/silver-sneakers-logo.png" }
       ) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       silverFit: file(
         relativePath: { eq: "thirdPartyLogos/silver-and-fit.png" }
       ) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       hp: file(relativePath: { eq: "thirdPartyLogos/health-partners.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       medica: file(relativePath: { eq: "thirdPartyLogos/medica.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       ucare: file(relativePath: { eq: "thirdPartyLogos/ucare_logo.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       bcbs: file(
         relativePath: { eq: "thirdPartyLogos/blue-cross-blue-shield-logo.png" }
       ) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -114,28 +86,28 @@ const Programs = () => {
               to check eligibility.
             </p>
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 col-gap-6 mt-6 px-4 lg:px-0">
-              <Img
-                fluid={data.silverSneakers.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.silverSneakers.childImageSharp.gatsbyImageData}
                 className="self-center"
               />
-              <Img
-                fluid={data.silverFit.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.silverFit.childImageSharp.gatsbyImageData}
                 className="self-center"
               />
-              <Img
-                fluid={data.hp.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.hp.childImageSharp.gatsbyImageData}
                 className="self-center"
               />
-              <Img
-                fluid={data.medica.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.medica.childImageSharp.gatsbyImageData}
                 className="self-center"
               />
-              <Img
-                fluid={data.bcbs.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.bcbs.childImageSharp.gatsbyImageData}
                 className="self-center"
               />
-              <Img
-                fluid={data.ucare.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.ucare.childImageSharp.gatsbyImageData}
                 className="self-center"
               />
             </div>
@@ -147,8 +119,8 @@ const Programs = () => {
             </Link>
           </div>
           <div className="flex w-full lg:w-1/2 self-center order-first lg:order-last">
-            <Img
-              fluid={data.programs.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.programs.childImageSharp.gatsbyImageData}
               className="w-full"
             />
           </div>

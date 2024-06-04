@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FaSignInAlt, FaShoppingCart, FaBars } from "react-icons/fa"
 
 const NavSmall = () => {
@@ -9,11 +9,7 @@ const NavSmall = () => {
     {
       logo: file(relativePath: { eq: "logos/logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
-            srcSet
-            src
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -22,7 +18,10 @@ const NavSmall = () => {
     <nav className="lg:hidden relative">
       <div className="flex justify-between bg-white p-4">
         <Link to="/">
-          <Img fluid={data.logo.childImageSharp.fluid} className="w-56" />
+          <GatsbyImage
+            image={data.logo.childImageSharp.gatsbyImageData}
+            className="w-56"
+          />
         </Link>
         <div className="flex text-primary self-center text-2xl">
           <button

@@ -1,62 +1,38 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const LogoCloud = () => {
   const data = useStaticQuery(graphql`
     {
       silverSneakers: file(relativePath: { eq: "silver-sneakers-logo.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       silverFit: file(relativePath: { eq: "silver-and-fit.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       blueCross: file(relativePath: { eq: "blue-cross-blue-shield-logo.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       medica: file(relativePath: { eq: "medica.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       uCare: file(relativePath: { eq: "ucare_logo.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       healthPartners: file(relativePath: { eq: "health-partners.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -64,28 +40,28 @@ const LogoCloud = () => {
   return (
     <div className="flex max-w-screen-xl mx-auto py-6">
       <div className="flex w-full justify-between">
-        <Img
-          fluid={data.silverSneakers.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.silverSneakers.childImageSharp.gatsbyImageData}
           className="w-40 self-center"
         />
-        <Img
-          fluid={data.silverFit.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.silverFit.childImageSharp.gatsbyImageData}
           className="w-40 self-center"
         />
-        <Img
-          fluid={data.blueCross.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.blueCross.childImageSharp.gatsbyImageData}
           className="w-40 self-center"
         />
-        <Img
-          fluid={data.medica.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.medica.childImageSharp.gatsbyImageData}
           className="w-40 self-center"
         />
-        <Img
-          fluid={data.uCare.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.uCare.childImageSharp.gatsbyImageData}
           className="w-40 self-center"
         />
-        <Img
-          fluid={data.healthPartners.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.healthPartners.childImageSharp.gatsbyImageData}
           className="w-40 self-center"
         />
       </div>

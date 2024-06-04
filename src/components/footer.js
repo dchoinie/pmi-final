@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"
 
 const Footer = () => {
@@ -21,11 +21,7 @@ const Footer = () => {
       }
       logo: file(relativePath: { eq: "logos/logo.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -36,7 +32,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="flex flex-col lg:flex-row justify-start w-full lg:w-1/2">
             {/* <div className="flex justify-center lg:self-start">
-              <Img fluid={data.logo.childImageSharp.fluid} className="w-56" />
+              <GatsbyImage image={data.logo.childImageSharp.gatsbyImageData} className="w-56" />
             </div> */}
             <div className="flex flex-col text-gray-500 text-center lg:text-left">
               <div className="flex flex-col self-center mb-2">
@@ -48,7 +44,11 @@ const Footer = () => {
                 <p>{data.site.siteMetadata.email}</p>
               </div>
               <div className="flex justify-center lg:justify-start my-4">
-                <a href="https://www.facebook.com/pmitotalfitness" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.facebook.com/pmitotalfitness"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="flex border border-gray-500 p-2 mr-1 rounded-full">
                     <FaFacebook className="text-xl" />
                   </div>

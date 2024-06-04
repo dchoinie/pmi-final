@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Dots from "../images/texture/dot-grid.png"
 import { FaAngleRight } from "react-icons/fa"
 import { IoMdFlashlight } from "react-icons/io"
@@ -11,11 +11,7 @@ const Hero2 = () => {
     {
       hero: file(relativePath: { eq: "people/undraw_healthy_habit_bh5w.png" }) {
         childImageSharp {
-          fluid(quality: 80) {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       site {
@@ -76,7 +72,10 @@ const Hero2 = () => {
             </div>
           </div>
           <div className="flex justify-end w-full lg:w-1/2 self-center mt-6 lg:mb-0">
-            <Img fluid={data.hero.childImageSharp.fluid} className="w-full" />
+            <GatsbyImage
+              image={data.hero.childImageSharp.gatsbyImageData}
+              className="w-full"
+            />
           </div>
         </div>
       </div>

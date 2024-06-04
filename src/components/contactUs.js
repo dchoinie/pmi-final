@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FaAngleRight } from "react-icons/fa"
 import Dots from "../images/texture/dot-grid.png"
 
@@ -9,11 +9,7 @@ const ContactUs = () => {
     {
       contact: file(relativePath: { eq: "people/undraw_contact_us_15o2.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -36,8 +32,8 @@ const ContactUs = () => {
       <div className="max-w-screen-xl mx-auto lg:h-screen px-4 lg:px-0 py-12 lg:py-0">
         <div className="flex flex-col lg:flex-row w-full h-full">
           <div className="flex w-full lg:w-1/2">
-            <Img
-              fluid={data.contact.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.contact.childImageSharp.gatsbyImageData}
               className="w-full self-center"
             />
           </div>

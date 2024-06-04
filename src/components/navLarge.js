@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FaSignInAlt, FaShoppingCart } from "react-icons/fa"
 
 const NavLarge = () => {
@@ -8,11 +8,7 @@ const NavLarge = () => {
     {
       logo: file(relativePath: { eq: "logos/logo.png" }) {
         childImageSharp {
-          fluid {
-            srcSet
-            src
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -22,7 +18,10 @@ const NavLarge = () => {
       <div className="flex justify-between max-w-screen-xl mx-auto">
         <div className="flex self-end">
           <Link to="/">
-            <Img fluid={data.logo.childImageSharp.fluid} className="w-56" />
+            <GatsbyImage
+              image={data.logo.childImageSharp.gatsbyImageData}
+              className="w-56"
+            />
           </Link>
         </div>
         <ul className="flex text-gray-700">

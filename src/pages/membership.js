@@ -1,51 +1,33 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import PricingCard from "../components/pricingCard"
 import NoContractBtn from "../components/joinButtons/noContract"
 import NoContract24Btn from "../components/joinButtons/noContract24"
 import ContractBtn from "../components/joinButtons/contract"
 import Contract24Btn from "../components/joinButtons/contract24"
-import SpecialBtn from "../components/joinButtons/special"
-import Special24Btn from "../components/joinButtons/special24"
 
 export const MembershipImage = graphql`
   {
     addUser: file(relativePath: { eq: "people/undraw_add_user_ipe3.png" }) {
       childImageSharp {
-        fluid {
-          src
-          srcSet
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FIXED)
       }
     }
     m2m: file(relativePath: { eq: "people/undraw_fitness_stats_sht6.png" }) {
       childImageSharp {
-        fluid {
-          src
-          srcSet
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FIXED)
       }
     }
     contract: file(relativePath: { eq: "people/undraw_contract_uy56.png" }) {
       childImageSharp {
-        fluid {
-          src
-          srcSet
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FIXED)
       }
     }
     student: file(relativePath: { eq: "people/undraw_exams_g4ow.png" }) {
       childImageSharp {
-        fluid {
-          src
-          srcSet
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FIXED)
       }
     }
   }
@@ -58,8 +40,8 @@ const Membership = ({ data }) => {
         <div className="max-w-screen-xl mx-auto px-4 lg:px-0 py-12 lg:py-0">
           <div className="flex flex-col lg:flex-row w-full h-screen justify-center">
             <div className="flex w-full lg:w-1/2">
-              <Img
-                fluid={data.addUser.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.addUser.childImageSharp.gatsbyImageData}
                 className="w-full self-center"
               />
             </div>
@@ -102,7 +84,10 @@ const Membership = ({ data }) => {
               <h2 className="text-2xl lg:text-4xl font-extrabold text-gray-700">
                 Month-To-Month Options
               </h2>
-              <Img fluid={data.m2m.childImageSharp.fluid} className="w-full" />
+              <GatsbyImage
+                image={data.m2m.childImageSharp.gatsbyImageData}
+                className="w-full"
+              />
             </div>
           </div>
           <div className="flex flex-col lg:flex-row mt-24">
@@ -110,8 +95,8 @@ const Membership = ({ data }) => {
               <h2 className="text-2xl lg:text-4xl font-extrabold text-gray-700">
                 12-Month Contract Options
               </h2>
-              <Img
-                fluid={data.contract.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.contract.childImageSharp.gatsbyImageData}
                 className="w-full"
               />
             </div>

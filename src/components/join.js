@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Dots from "../images/texture/dot-grid.png"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FaAngleRight, FaPhone } from "react-icons/fa"
 
 const Join = () => {
@@ -9,11 +9,7 @@ const Join = () => {
     {
       join: file(relativePath: { eq: "people/undraw_team_ih79.png" }) {
         childImageSharp {
-          fluid(quality: 100) {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -57,8 +53,8 @@ const Join = () => {
             </div>
           </div>
           <div className="flex w-full lg:w-1/2 order-first lg:order-last">
-            <Img
-              fluid={data.join.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.join.childImageSharp.gatsbyImageData}
               className="w-full self-center"
             />
           </div>

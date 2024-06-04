@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Dots from "../images/texture/dot-grid.png"
 import { FaPhone } from "react-icons/fa"
 
@@ -11,11 +11,7 @@ const Explore2 = () => {
         relativePath: { eq: "people/undraw_activity_tracker_1l9o.png" }
       ) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -37,8 +33,8 @@ const Explore2 = () => {
       <div className="bg-white h-full flex max-w-screen-xl mx-auto">
         <div className="flex flex-col lg:flex-row w-full">
           <div className="flex w-full lg:w-1/2 justify-center">
-            <Img
-              fluid={data.explore.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.explore.childImageSharp.gatsbyImageData}
               className="w-full self-center"
             />
           </div>

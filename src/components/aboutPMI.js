@@ -1,18 +1,14 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Dots from "../images/texture/dot-grid.png"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const AboutPMI = () => {
   const data = useStaticQuery(graphql`
     {
       about: file(relativePath: { eq: "pmi/pmi1.jpg" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -35,8 +31,8 @@ const AboutPMI = () => {
       <div className="max-w-screen-xl mx-auto h-screen">
         <div className="flex flex-col lg:flex-row w-full h-full">
           <div className="flex w-full lg:w-1/2 p-6">
-            <Img
-              fluid={data.about.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.about.childImageSharp.gatsbyImageData}
               className="w-full self-center rounded-md shadow-md"
             />
           </div>

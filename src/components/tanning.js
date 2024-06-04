@@ -1,17 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Tanning = () => {
   const data = useStaticQuery(graphql`
     {
       tanning: file(relativePath: { eq: "people/undraw_sunlight_tn7t.png" }) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -66,8 +62,8 @@ const Tanning = () => {
             </div>
           </div>
           <div className="flex w-full lg:w-1/2">
-            <Img
-              fluid={data.tanning.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.tanning.childImageSharp.gatsbyImageData}
               className="self-center w-full"
             />
           </div>

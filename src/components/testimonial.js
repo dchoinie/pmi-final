@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import { FaUserCircle } from "react-icons/fa"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default class testimonial extends Component {
   static propTypes = {
@@ -15,8 +14,8 @@ export default class testimonial extends Component {
     return (
       <div className="flex bg-background rounded-md shadow-md">
         <div className="flex w-1/6 justify-center">
-          <Img
-            fluid={this.props.img}
+          <GatsbyImage
+            image={this.props.img}
             className="w-12 lg:w-16 h-12 lg:h-16 rounded-full self-center shadow-md"
           />
         </div>

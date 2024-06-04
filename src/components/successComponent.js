@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FaAngleLeft } from "react-icons/fa"
 import Dots from "../images/texture/dot-grid.png"
 
@@ -13,11 +13,7 @@ const SuccessComponent = () => {
         }
       ) {
         childImageSharp {
-          fluid {
-            src
-            srcSet
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -40,8 +36,8 @@ const SuccessComponent = () => {
       <div className="max-w-screen-xl mx-auto lg:h-screen px-4 lg:px-0 py-12 lg:py-0">
         <div className="flex flex-col lg:flex-row w-full h-full">
           <div className="flex w-full lg:w-1/2">
-            <Img
-              fluid={data.success.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.success.childImageSharp.gatsbyImageData}
               className="w-full self-center"
             />
           </div>
